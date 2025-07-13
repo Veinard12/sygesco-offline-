@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>Login SYGESCO</title></head>
+<body>
+  <h2>Connexion</h2>
+  <form method="post">
+    Email:<br><input type="email" name="email" required><br>
+    Mot de passe:<br><input type="password" name="password" required><br><br>
+    <button type="submit">Se connecter</button>
+  </form>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, msg in messages %}
+        <p>{{ msg }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</body>
+  </html>
